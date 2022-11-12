@@ -8,11 +8,11 @@ public class DepositCalculator {
         return round (interest, 2);
     }
 
-    double calculateSimplePercent (double amount,double yearRate, int depositPeriod) {
+    double calculateSimplePercent (double amount,double yearRate, int depositPeriod) { // отстуствует пробел между ,
         return round (amount + amount * yearRrate * depositPeriod, 2);
     }
 
-    double round (double value,int places) {
+    double round (double value,int places) { // отсутствие пробела
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
     }
@@ -21,7 +21,7 @@ public class DepositCalculator {
         int period;
         int action;
         int amount;
-        Scanner abcdef = new Scanner(System.in);
+        Scanner abcdef = new Scanner(System.in); //имя переменной должно иметь осмысленное название.
 
         System.out.println("Введите сумму вклада в рублях:");
         amount = abcdef.nextInt();
